@@ -1,0 +1,603 @@
+<!doctype html>
+<html lang="sr-Latn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#4a2438">
+<title>Heklichica — Ručno heklane igračke</title>
+<meta name="description" content="Ručno heklane igračke od pliš vunice, rađene po porudžbini. Heklani meda, zeke, zvečke i igračke po želji. Dostava širom Srbije.">
+<link rel="icon" href="img/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Nunito:wght@400;600;700;800&family=Pinyon+Script&display=swap" rel="stylesheet">
+<style>
+:root{
+  --mauve:#c58da8; --blush:#f8e9ef; --blush-2:#f1d6e2; --cream:#fff8f6; --plum:#4a2438; --plum-2:#7a4a62;
+  --cocoa:#8b5a3c; --cta:#b23a6b; --cta-2:#962f58; --ink:#33202a; --muted:#7d6573; --line:#ecd7e0;
+  --radius:22px; --shadow:0 12px 32px -14px rgba(74,36,56,.35);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Nunito",system-ui,sans-serif;background:var(--cream);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;cursor:pointer;color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+h1,h2,h3,h4{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;letter-spacing:-.005em;line-height:1.05;color:var(--plum)}
+h1,h2,h3,h4,.now,.hero-stats b,.tier b,.price,.cmp th{font-variant-numeric:lining-nums}
+em.script{font-family:"Pinyon Script","Cormorant Garamond",cursive;font-style:normal;font-weight:400;color:var(--cta);letter-spacing:0}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--plum-2)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5em;padding:15px 28px;border-radius:999px;font-weight:800;font-size:15px;border:2px solid var(--plum);transition:transform .15s,background .15s,color .15s;cursor:pointer;background:none;text-align:center}
+.btn-buy{background:var(--cta);border-color:var(--cta);color:#fff}
+.btn-buy:hover{background:var(--cta-2);border-color:var(--cta-2);transform:translateY(-2px)}
+.btn-ghost{color:var(--plum)}
+.btn-ghost:hover{background:var(--plum);color:#fff}
+.btn:focus-visible,button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--plum);outline-offset:2px}
+
+.announce{background:var(--plum);color:#f6dce8;font-size:13px;font-weight:700;text-align:center;padding:9px 16px}
+header.site{position:sticky;top:0;z-index:50;background:rgba(255,248,246,.93);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:74px;gap:20px;position:relative}
+.logo{display:flex;align-items:center;gap:10px;color:var(--plum);min-width:0}
+.logo img{width:46px;height:46px;border-radius:50%;flex:none}
+.logo .wm{font-family:"Pinyon Script",cursive;font-size:34px;line-height:1;color:var(--plum)}
+.logo small{display:block;font-size:10px;letter-spacing:.2em;text-transform:uppercase;font-weight:800;color:var(--plum-2);margin-top:-2px}
+nav.main{display:flex;gap:30px;font-weight:700;font-size:15px}
+nav.main a{position:relative;padding:4px 0}
+nav.main a::after{content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--cta);transition:width .2s}
+nav.main a:hover::after,nav.main a.active::after{width:100%}
+.icons{display:flex;gap:12px;align-items:center}
+.icon-btn{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--line);background:#fff;position:relative}
+.icon-btn svg{width:20px;height:20px;stroke:var(--plum);fill:none;stroke-width:2}
+.badge{position:absolute;top:-4px;right:-4px;background:var(--cta);color:#fff;font-size:11px;font-weight:800;min-width:19px;height:19px;border-radius:10px;display:grid;place-items:center;padding:0 4px;transition:transform .2s}
+.badge.bump{transform:scale(1.35)}
+.menu-btn{display:none}
+.mobile-nav{display:none}
+
+section.block{padding:96px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(36px,4.6vw,60px);margin-top:10px}
+.sec-head p{color:var(--muted);max-width:44ch}
+
+/* tiles / cards */
+.grid-products{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:#fff;border-radius:var(--radius);overflow:hidden;border:1.5px solid var(--line);transition:transform .2s,box-shadow .2s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.card .media{position:relative;aspect-ratio:4/5;overflow:hidden;background:var(--blush);display:block}
+.card .media img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .media img{transform:scale(1.05)}
+.tag{position:absolute;top:14px;left:14px;background:var(--plum);color:#fff;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:6px 12px;border-radius:999px}
+.tag.rose{background:var(--mauve);color:var(--plum)}
+.card .body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:30px}
+.card .desc{color:var(--muted);font-size:14.5px;flex:1}
+.card .row{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:10px}
+.price{font-weight:800;font-size:18px;color:var(--plum)}
+.price small{font-weight:600;color:var(--muted);font-size:12px;margin-right:4px}
+.card .btn{padding:11px 18px;font-size:14px}
+.card.cta{background:var(--blush);border:2px dashed var(--mauve);justify-content:center}
+
+/* faq */
+.faq{max-width:820px;margin:0 auto}
+details{border-bottom:1.5px solid var(--line);padding:20px 0}
+summary{cursor:pointer;list-style:none;font-family:"Cormorant Garamond",serif;font-weight:700;font-size:24px;color:var(--plum);display:flex;justify-content:space-between;gap:18px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:"Nunito";font-weight:800;font-size:24px;line-height:1;transition:transform .2s;flex:none}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--muted);margin-top:12px;max-width:64ch}
+
+/* reviews */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.review{background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:14px}
+.review .stars{color:var(--cta);letter-spacing:3px;font-size:18px}
+.review .q{font-family:"Cormorant Garamond",serif;font-size:23px;line-height:1.3;color:var(--ink);flex:1;font-weight:500}
+.review b{color:var(--plum-2);font-size:14px}
+
+footer{background:var(--plum);color:#e9cfdc;padding:64px 0 28px;margin-top:96px}
+footer .cols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+footer h4{color:#fff;font-size:22px;margin-bottom:12px}
+footer li{list-style:none;margin:8px 0;font-size:14px}
+footer a:hover{color:#fff;text-decoration:underline}
+footer .legal{border-top:1px solid rgba(255,255,255,.14);padding-top:22px;display:flex;justify-content:space-between;font-size:13px;opacity:.75;flex-wrap:wrap;gap:12px}
+
+/* toast */
+.toast{position:fixed;top:92px;right:24px;z-index:130;background:var(--plum);color:#fff;padding:14px 18px;border-radius:16px;box-shadow:var(--shadow);font-weight:700;font-size:14px;max-width:320px;opacity:0;transform:translateY(-10px);pointer-events:none;transition:.25s}
+.toast.show{opacity:1;transform:none}
+
+/* cart drawer + checkout */
+.overlay{position:fixed;inset:0;background:rgba(51,32,42,.5);z-index:100;opacity:0;pointer-events:none;transition:opacity .25s}
+.overlay.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(440px,100%);background:var(--cream);z-index:110;transform:translateX(105%);transition:transform .3s;display:flex;flex-direction:column;box-shadow:-16px 0 40px -20px rgba(0,0,0,.4)}
+.drawer.show{transform:none}
+.drawer-h{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--line)}
+.drawer-h h3{font-size:30px}
+.x{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--line);background:#fff;font-size:22px;line-height:1;display:grid;place-items:center}
+.drawer-b{flex:1;overflow:auto;padding:8px 22px}
+.drawer-f{padding:16px 22px 22px;border-top:1px solid var(--line);background:#fff}
+.line{display:grid;grid-template-columns:72px 1fr auto;gap:14px;padding:16px 0;border-bottom:1px solid var(--line);align-items:start}
+.line img{width:72px;height:90px;object-fit:cover;border-radius:12px;background:var(--blush)}
+.line b{display:block;color:var(--plum);font-size:15px;line-height:1.3}
+.line small{display:block;color:var(--muted);font-size:12.5px;line-height:1.4;margin-top:2px}
+.line .pr{font-weight:800;color:var(--plum);font-size:15px;text-align:right}
+.lq{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:999px;margin-top:8px;background:#fff}
+.lq button{width:32px;height:32px;border:0;background:none;font-weight:800;font-size:17px}
+.lq span{min-width:22px;text-align:center;font-weight:800;font-size:14px}
+.rm{background:none;border:0;color:var(--muted);font-size:12px;text-decoration:underline;margin-top:6px;display:block;margin-left:auto}
+.empty{text-align:center;padding:60px 10px;color:var(--muted)}
+.empty .em{font-size:48px}
+.sum{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin:4px 0}
+.sum.tot{font-size:18px;font-weight:800;color:var(--plum);margin:10px 0 14px}
+.ship-note{font-size:12.5px;color:var(--plum-2);background:var(--blush);border-radius:12px;padding:8px 12px;margin-bottom:10px;font-weight:700}
+.drawer-f .btn{width:100%}
+
+.modal{position:fixed;inset:0;z-index:120;display:none;overflow:auto;padding:24px 16px;background:rgba(51,32,42,.55)}
+.modal.show{display:block}
+.sheet{background:var(--cream);max-width:920px;margin:0 auto;border-radius:28px;padding:34px;display:grid;grid-template-columns:1.2fr 1fr;gap:34px;position:relative}
+.sheet .x{position:absolute;top:16px;right:16px}
+.sheet h3{font-size:38px;margin-bottom:6px}
+.fld{display:block;margin:14px 0 0}
+.fld span{display:block;font-weight:800;font-size:13px;color:var(--plum);margin-bottom:6px}
+.fld input,.fld textarea,.fld select{width:100%;border:1.5px solid var(--line);border-radius:14px;padding:13px 14px;font:inherit;font-size:16px;background:#fff;color:var(--ink)}
+.fld input:focus,.fld textarea:focus{border-color:var(--plum)}
+.fld input.bad{border-color:#c0392b}
+.err{color:#c0392b;font-size:12.5px;font-weight:700;min-height:0;display:none;margin-top:4px}
+.fld.has-err .err{display:block}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pay{display:flex;gap:12px;align-items:center;border:2px solid var(--plum);background:#fff;border-radius:16px;padding:14px 16px;margin-top:18px;font-weight:700;color:var(--plum)}
+.pay small{display:block;font-weight:600;color:var(--muted)}
+.pay i{width:18px;height:18px;border-radius:50%;border:5px solid var(--plum);flex:none}
+.recap{background:#fff;border:1.5px solid var(--line);border-radius:20px;padding:20px;align-self:start}
+.recap h4{font-size:26px;margin-bottom:6px}
+.recap .rl{display:flex;justify-content:space-between;gap:12px;font-size:14px;padding:8px 0;border-bottom:1px dashed var(--line)}
+.recap .rl small{display:block;color:var(--muted)}
+.done{text-align:center;max-width:560px;margin:0 auto;padding:20px 0 10px;grid-column:1/-1}
+.done .big{font-size:56px}
+.done h3{font-size:46px;margin:8px 0 10px}
+.done p{color:var(--muted);margin:8px 0}
+.done .recap{text-align:left;margin:22px 0}
+.help-link{font-size:13px;color:var(--muted);text-align:center;margin-top:12px}
+.help-link a{text-decoration:underline;color:var(--plum)}
+
+@media (max-width:1024px){
+  .grid-products{grid-template-columns:repeat(2,1fr)}
+  footer .cols{grid-template-columns:1fr 1fr}
+}
+@media (max-width:820px){
+  nav.main{display:none}
+  .menu-btn{display:grid}
+  header.site.menu-open .mobile-nav{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;padding:8px 24px 18px;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:0 14px 24px -18px rgba(0,0,0,.35)}
+  .mobile-nav a{padding:13px 0;font-size:17px;border-bottom:1px solid var(--line)}
+  .mobile-nav a:last-child{border-bottom:0}
+  section.block{padding:64px 0}
+  .reviews{grid-template-columns:1fr}
+  .sheet{grid-template-columns:1fr;padding:26px 20px}
+  .sheet .recap-wrap{order:-1}
+}
+@media (max-width:560px){
+  .wrap{padding:0 16px}
+  .grid-products{grid-template-columns:1fr}
+  footer .cols{grid-template-columns:1fr}
+  .toast{left:16px;right:16px;max-width:none;top:84px}
+  .two{grid-template-columns:1fr}
+  .logo .wm{font-size:29px}
+  .logo img{width:40px;height:40px}
+  .icons{gap:8px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}}
+
+.hero{padding:56px 0 72px;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(50px,6.4vw,92px);margin:18px 0 22px}
+.hero h1 .script{font-size:1.05em}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:34ch;margin-bottom:32px}
+.ctas{display:flex;gap:14px;flex-wrap:wrap}
+.hero-stats{display:flex;gap:34px;margin-top:40px;flex-wrap:wrap}
+.hero-stats b{display:block;font-family:"Cormorant Garamond",serif;font-size:34px;color:var(--plum);line-height:1.1}
+.hero-stats small{color:var(--muted);font-size:13px;font-weight:600}
+.hero-art{position:relative;aspect-ratio:4/5}
+.hero-art .blob{position:absolute;inset:6% -8% -4% 10%;background:var(--blush-2);border-radius:48% 52% 44% 56%/52% 42% 58% 48%}
+.hero-art .main{position:absolute;inset:0 12% 8% 0;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transform:rotate(-2deg)}
+.hero-art .main img,.hero-art .mini img{width:100%;height:100%;object-fit:cover}
+.hero-art .mini{position:absolute;right:0;bottom:0;width:42%;aspect-ratio:1;border-radius:18px;overflow:hidden;border:6px solid var(--cream);box-shadow:var(--shadow);transform:rotate(4deg);background:var(--mauve)}
+.sticker{position:absolute;top:4%;right:2%;width:118px;height:118px;border-radius:50%;background:var(--plum);color:#fff;display:grid;place-items:center;text-align:center;font-family:"Cormorant Garamond",serif;font-weight:600;font-size:18px;line-height:1.05;transform:rotate(12deg);box-shadow:var(--shadow);z-index:3}
+.sticker i{font-weight:500;color:#f1c9da}
+
+.usps{background:var(--mauve);border-block:2px solid var(--plum)}
+.usps .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.usp{display:flex;gap:14px;align-items:center;padding:22px 18px;border-right:2px dashed rgba(74,36,56,.3)}
+.usp:last-child{border-right:0}
+.usp .ic{font-size:28px}
+.usp b{display:block;color:var(--plum);font-size:15px}
+.usp small{color:#5a2f45;font-size:13px}
+
+.steps{background:var(--plum);color:#f6dce8;padding:96px 0}
+.steps h2{color:#fff;font-size:clamp(36px,4.6vw,60px);margin:10px 0 40px}
+.steps h2 .script{color:#f1c9da}
+.steps-l{list-style:none;display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.steps-l li{display:flex;flex-direction:column;gap:14px;background:rgba(255,255,255,.07);border-radius:22px;padding:24px 20px}
+.steps-l b{width:42px;height:42px;border-radius:50%;background:#f1c9da;color:var(--plum);display:grid;place-items:center;font-family:"Cormorant Garamond",serif;font-size:24px}
+.steps-l h4{color:#fff;font-size:25px;margin-bottom:6px}
+.steps-l p{font-size:14px;opacity:.88}
+
+.story-sec{padding-bottom:96px}
+.story{display:grid;grid-template-columns:.9fr 1.1fr;gap:64px;align-items:center}
+.story-img{border-radius:32px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5;background:var(--blush)}
+.story-img img{width:100%;height:100%;object-fit:cover}
+.story blockquote{font-family:"Cormorant Garamond",serif;font-weight:600;font-size:clamp(38px,4.6vw,62px);line-height:1.02;color:var(--plum);margin:14px 0 22px}
+.story p{color:var(--muted);font-size:17px;max-width:52ch}
+
+.ig-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.ig-grid a{aspect-ratio:4/5;overflow:hidden;border-radius:14px;display:block;background:var(--blush)}
+.ig-grid img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.ig-grid a:hover img{transform:scale(1.07)}
+
+@media (max-width:1024px){
+  .usps .wrap{grid-template-columns:repeat(2,1fr)}
+  .usp:nth-child(2){border-right:0}
+  .steps-l{grid-template-columns:repeat(2,1fr)}
+  .ig-grid{grid-template-columns:repeat(3,1fr)}
+}
+@media (max-width:820px){
+  .hero{padding-top:28px}
+  .hero .wrap,.story{grid-template-columns:1fr}
+  .hero-art{order:-1;max-width:440px;margin:0 auto;width:100%}
+  .story{gap:36px}
+  .story-img{max-width:440px}
+  .steps{padding:64px 0}
+}
+@media (max-width:560px){
+  .usps .wrap{grid-template-columns:1fr}
+  .usp{border-right:0;border-bottom:2px dashed rgba(74,36,56,.3)}
+  .usp:last-child{border-bottom:0}
+  .steps-l{grid-template-columns:1fr}
+  .sticker{width:92px;height:92px;font-size:15px}
+  .hero-stats{gap:22px}
+}
+
+</style>
+</head>
+<body>
+<div class="announce">Ručno heklano po porudžbini · Dostava širom Srbije 🚐</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Heklichica logo"><span><span class="wm">Heklichica</span><small>ručni radovi</small></span></a>
+    <nav class="main" aria-label="Glavna navigacija">
+      <a href="index.html#kolekcija">Igračke</a>
+      <a href="meda.html">Heklani meda</a>
+      <a href="index.html#po-zelji">Po želji</a>
+      <a href="index.html#kako">Kako poručiti</a>
+      <a href="index.html#utisci">Utisci</a>
+    </nav>
+    <div class="icons">
+      <button class="icon-btn" type="button" id="cartBtn" aria-label="Otvori korpu"><svg viewBox="0 0 24 24"><path d="M5 8h14l-1.2 11.2a2 2 0 0 1-2 1.8H8.2a2 2 0 0 1-2-1.8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="badge" id="cartCount">0</span></button>
+      <button class="icon-btn menu-btn" type="button" aria-label="Meni" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-txt">
+      <span class="eyebrow">Heklane igračkice · Unikatni dizajn</span>
+      <h1>Poklon koji se pamti <em class="script">na prvi pogled.</em></h1>
+      <p class="lead">Ručno heklane igračke od pliš vunice, sa ljubavlju. Svaka nastaje isključivo po porudžbini, u bojama koje ti izabereš.</p>
+      <div class="ctas">
+        <a class="btn btn-buy" href="#kolekcija">Izaberi igračku →</a>
+        <a class="btn btn-ghost" href="meda.html">Heklani meda</a>
+      </div>
+      <div class="hero-stats">
+        <div><b>209</b><small>objava na Instagramu</small></div>
+        <div><b>1 po 1</b><small>bez serija i kopija</small></div>
+        <div><b>🚐</b><small>dostava širom Srbije</small></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <div class="blob"></div>
+      <div class="main"><img src="img/meda1.jpg" alt="Heklani meda u pletenoj korpi pored vunice" fetchpriority="high"></div>
+      <div class="mini"><img src="img/zeka5.jpg" alt="Heklana zeka sa dugim ušima i roze mašnom"></div>
+      <div class="sticker">nema<br>dugme<br><i>„ponovi“</i></div>
+    </div>
+  </div>
+</section>
+
+<div class="usps">
+  <div class="wrap">
+    <div class="usp"><span class="ic">🧶</span><div><b>Ručno heklano</b><small>Svaka petlja prolazi kroz ruke</small></div></div>
+    <div class="usp"><span class="ic">🎨</span><div><b>Boje po tvom izboru</b><small>Odeća, mašne, čak i ime</small></div></div>
+    <div class="usp"><span class="ic">🎀</span><div><b>Sertifikat i mašnica</b><small>Pakuje se kao pravi poklon</small></div></div>
+    <div class="usp"><span class="ic">🚐</span><div><b>Dostava širom Srbije</b><small>Post Express, plaćanje pouzećem</small></div></div>
+  </div>
+</div>
+
+<section class="block" id="kolekcija">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Kolekcija</span><h2>Drugari za <em class="script">maženje</em></h2></div>
+      <p>Svaka igračka se hekla posebno za tebe, zato ti rok izrade i boje potvrđujemo čim primimo porudžbinu.</p>
+    </div>
+    <div class="grid-products">
+      <article class="card">
+        <a class="media" href="meda.html"><span class="tag">Najtraženiji</span><img src="img/meda7.jpg" alt="Braon heklani meda" loading="lazy"></a>
+        <div class="body"><h3>Heklani meda</h3><p class="desc">Mekan kao oblak, u boji i sa odećom po tvom izboru. Može i sa imenom.</p>
+          <div class="row"><span class="price"><small>od</small>4.200 RSD</span><a class="btn btn-buy" href="meda.html">Izaberi</a></div></div>
+      </article>
+      <article class="card">
+        <a class="media" href="#zeka"><span class="tag rose">Balerina</span><img src="img/zeka5.jpg" alt="Bela heklana zeka sa roze mašnom" loading="lazy"></a>
+        <div class="body" id="zeka"><h3>Zeka balerina</h3><p class="desc">Dugih ušiju, u haljinici sa tilom i tufnicama. Visina oko 40 cm. Savršen poklon za krštenje.</p>
+          <div class="row"><span class="price"><small>od</small>4.900 RSD</span><button class="btn btn-buy" type="button" data-add="zeka">Dodaj u korpu</button></div></div>
+      </article>
+      <article class="card">
+        <a class="media" href="#zvecka"><span class="tag">Novo</span><img src="img/zvecka2.jpg" alt="Heklane zvečke sa medom i drvenom ručkom" loading="lazy"></a>
+        <div class="body" id="zvecka"><h3>Zvečka sa medom</h3><p class="desc">Mede u mekanim bojicama i drvena ručka, za male prstiće koji tek otkrivaju svet.</p>
+          <div class="row"><span class="price">2.200 RSD</span><button class="btn btn-buy" type="button" data-add="zvecka">Dodaj u korpu</button></div></div>
+      </article>
+      <article class="card">
+        <a class="media" href="#dino"><img src="img/dino1.jpg" alt="Zeleni heklani dinosaurusi na obali reke" loading="lazy"></a>
+        <div class="body" id="dino"><h3>Dinosaurus</h3><p class="desc">Zeleni „strašni gušter“ koji je zapravo najveći maza. Boje biraš ti.</p>
+          <div class="row"><span class="price"><small>od</small>4.500 RSD</span><button class="btn btn-buy" type="button" data-add="dino">Dodaj u korpu</button></div></div>
+      </article>
+      <article class="card">
+        <a class="media" href="#jednorog"><img src="img/jed1.jpg" alt="Heklani jednorog sa roze grivom" loading="lazy"></a>
+        <div class="body" id="jednorog"><h3>Jednorog</h3><p class="desc">Idealan poklon za najmlađe: mekan, sa šarenom grivom i haljinicom po želji.</p>
+          <div class="row"><span class="price"><small>od</small>5.200 RSD</span><button class="btn btn-buy" type="button" data-add="jednorog">Dodaj u korpu</button></div></div>
+      </article>
+      <article class="card cta" id="po-zelji">
+        <div class="body" style="justify-content:center;padding:34px 28px">
+          <span style="font-size:44px">✨</span>
+          <h3>Igračka po želji</h3>
+          <p class="desc" style="flex:0">Imaš ideju? Dužina izrade, uloženo vreme i materijal određuju cenu. Opiši nam šta zamišljaš u napomeni uz porudžbinu.</p>
+          <div class="row"><span class="price"><small>od</small>5.500 RSD</span><button class="btn btn-buy" type="button" data-add="pozelji">Dodaj u korpu</button></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="steps" id="kako">
+  <div class="wrap">
+    <span class="eyebrow" style="color:#f1c9da">Kako poručiti</span>
+    <h2>Od tvoje želje do <em class="script">zagrljaja</em></h2>
+    <ol class="steps-l">
+      <li><b>1</b><div><h4>Izaberi igračku</h4><p>Dodaj je u korpu i popuni adresu. Plaćaš tek kad paket stigne.</p></div></li>
+      <li><b>2</b><div><h4>Dogovorimo detalje</h4><p>Javljamo se oko palete boja, odeće, roka izrade i opcije isporuke.</p></div></li>
+      <li><b>3</b><div><h4>Heklamo za tebe</h4><p>Svaka igračka se radi po porudžbini. Paranje i ponovno heklanje su deo posla.</p></div></li>
+      <li><b>4</b><div><h4>Fotografija i video</h4><p>Po završetku rada dobijaš fotografije i video zapis gotove igračke.</p></div></li>
+      <li><b>5</b><div><h4>Šaljemo Post Express-om</h4><p>Sve je spremno! Prijatelj za tvoju bebu je na putu.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="block story-sec">
+  <div class="wrap story">
+    <div class="story-img"><img src="img/meda3.jpg" alt="Heklani meda sa plavom kragnom u rukama" loading="lazy"></div>
+    <div>
+      <span class="eyebrow">Naša priča</span>
+      <blockquote>Svaka petlja prolazi kroz <em class="script">nečije ruke.</em></blockquote>
+      <p>Kod mene ne postoje serije ni kopije. Svaka Heklichica je unikat, rođena iz mašte i stvorena da obradi baš onoga kome je namenjena. Ne pravim mnogo toga samo da bih napravila mnogo, već da neko, kada je dobije, oseti koliko je truda u nju uloženo.</p>
+      <p style="margin-top:12px">Zato prvo heklam, a tek onda se fotografiše. I zato što ono što je ručno, ne meri se novcem, već srcem.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="utisci" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">Vaši utisci</span><h2>Šta kažu <em class="script">kupci</em></h2></div>
+      <p>Poruke kupaca iz našeg Instagram highlight-a „Utisci“, onako kako su stigle.</p>
+    </div>
+    <div class="reviews">
+      <div class="review"><span class="stars">★★★★★</span><p class="q">„Zeka je stigao, prosto sam očarana, toliko nežnosti i ljubavi u ovoj igrački, da ja stvarno ne mogu da pronađem adekvatnu reč da opišem ovu lepotu… Osećaj je da vam je poklonio neko najdraži i od srca… hvala puno od ❤“</p><b>Božana · zeka</b></div>
+      <div class="review"><span class="stars">★★★★★</span><p class="q">„Hvala vam puno za poklon. Darija se oduševila, jako je lepo urađeno i jako nam se sviđa. Hvala vam puno, oduševili ste nas.“</p><b>Dragana · zeka</b></div>
+      <div class="review"><span class="stars">★★★★★</span><p class="q">„Jesmo, svidelo nam se mnogo i svaka Vam čast, nije ovo lako odraditi. Ona već spava sa medom, pored nje je non stop.“</p><b>Irena · meda</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><span class="eyebrow">@heklichica_</span><h2>Iza kulisa <em class="script">radionice</em></h2></div>
+      <a class="btn btn-ghost" href="https://www.instagram.com/heklichica_/" target="_blank" rel="noopener">Pogledaj na Instagramu</a>
+    </div>
+    <div class="ig-grid">
+      <a href="https://www.instagram.com/p/DdrXFBXtG5U/" target="_blank" rel="noopener"><img src="img/ig1.jpg" alt="Meda u korpi" loading="lazy"></a>
+      <a href="https://www.instagram.com/p/DcwNMBKDTbH/" target="_blank" rel="noopener"><img src="img/ig2.jpg" alt="Prve zvečke" loading="lazy"></a>
+      <a href="https://www.instagram.com/p/Dck3EyRDRuL/" target="_blank" rel="noopener"><img src="img/ig3.jpg" alt="Meda sa plavim srcem" loading="lazy"></a>
+      <a href="https://www.instagram.com/p/Dbtg5t_kUQH/" target="_blank" rel="noopener"><img src="img/ig4.jpg" alt="Meda sa satenskom trakom" loading="lazy"></a>
+      <a href="https://www.instagram.com/p/DdqWqzDkbRq/" target="_blank" rel="noopener"><img src="img/ig5.jpg" alt="Zeka u ruci" loading="lazy"></a>
+      <a href="https://www.instagram.com/p/DdQpQQWNMSc/" target="_blank" rel="noopener"><img src="img/ig6.jpg" alt="Meda sa tamnoplavom mašnom" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<section class="block" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head" style="justify-content:center;text-align:center"><div><span class="eyebrow">Pitanja</span><h2>Česta pitanja</h2></div></div>
+    <div class="faq">
+      <details open><summary>Koliko se čeka na igračku?</summary><p>Svaka igračka se izrađuje isključivo po porudžbini, pa rok zavisi od modela i trenutnih porudžbina. Tačan rok ti potvrđujemo čim primimo porudžbinu.</p></details>
+      <details><summary>Mogu li da biram boje i odeću?</summary><p>Naravno. Paletu boja, odeću i detalje dogovaramo nakon porudžbine. Možeš tražiti i ime po želji.</p></details>
+      <details><summary>Kako plaćam i kako stiže paket?</summary><p>Plaćaš pouzećem, gotovinom kuriru pri preuzimanju. Igračku šaljemo Post Express službom širom Srbije, a pre slanja dobijaš fotografije i video zapis.</p></details>
+      <details><summary>Šta ako želim nešto što nije na sajtu?</summary><p>Postoji mogućnost izrade igračica po želji. Za takve igračke se formira posebna cena, jer zavisi od dužine izrade, uloženog vremena i materijala. Opiši ideju u napomeni uz porudžbinu.</p></details>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div><a class="logo" href="index.html" style="color:#fff"><img src="img/logo.jpg" alt=""><span><span class="wm" style="color:#fff">Heklichica</span></span></a>
+        <p style="margin-top:16px;font-size:14px;max-width:34ch">Dobrodošli u svet elegancije i mašte. Ručno heklane igračke s ljubavlju! 🧶</p></div>
+      <div><h4>Prodavnica</h4><ul><li><a href="meda.html">Heklani meda</a></li><li><a href="index.html#kolekcija">Sve igračke</a></li><li><a href="index.html#po-zelji">Igračka po želji</a></li></ul></div>
+      <div><h4>Pomoć</h4><ul><li><a href="index.html#kako">Kako poručiti</a></li><li><a href="index.html#utisci">Utisci kupaca</a></li><li><a href="index.html#kolekcija">Dostava širom Srbije</a></li></ul></div>
+      <div><h4>Pitanja?</h4><ul><li><a href="https://www.instagram.com/heklichica_/" target="_blank" rel="noopener">Pišite nam na Instagramu @heklichica_</a></li></ul></div>
+    </div>
+    <div class="legal"><span>© 2026 Heklichica. Sva prava zadržana.</span><span>Ručno heklane igračke · Dostava širom Srbije 🚐</span></div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Korpa" aria-hidden="true">
+  <div class="drawer-h"><h3>Tvoja korpa</h3><button class="x" type="button" id="drawerClose" aria-label="Zatvori korpu">×</button></div>
+  <div class="drawer-b" id="drawerBody"></div>
+  <div class="drawer-f" id="drawerFoot"></div>
+</aside>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="coTitle">
+  <div class="sheet" id="sheet">
+    <button class="x" type="button" id="modalClose" aria-label="Zatvori">×</button>
+    <form id="coForm" novalidate>
+      <span class="eyebrow">Poručivanje</span>
+      <h3 id="coTitle">Gde šaljemo igračku?</h3>
+      <p style="color:var(--muted);font-size:15px">Plaćaš kuriru pri preuzimanju. Nakon porudžbine javljamo se radi potvrde boja i detalja.</p>
+      <label class="fld" data-f="name"><span>Ime i prezime</span><input name="name" autocomplete="name" required><b class="err">Upiši ime i prezime.</b></label>
+      <label class="fld" data-f="address"><span>Adresa (ulica i broj)</span><input name="address" autocomplete="street-address" required><b class="err">Upiši adresu.</b></label>
+      <div class="two">
+        <label class="fld" data-f="city"><span>Mesto</span><input name="city" autocomplete="address-level2" required><b class="err">Upiši mesto.</b></label>
+        <label class="fld" data-f="zip"><span>Poštanski broj</span><input name="zip" inputmode="numeric" autocomplete="postal-code" required><b class="err">Upiši poštanski broj (5 cifara).</b></label>
+      </div>
+      <label class="fld" data-f="phone"><span>Telefon</span><input name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="06x xxx xxxx"><b class="err">Upiši broj telefona.</b></label>
+      <label class="fld"><span>Napomena (nije obavezno)</span><textarea name="note" rows="2" placeholder="Boje, odeća, ime za vez, za koga je poklon…"></textarea></label>
+      <div class="pay"><i></i><div>Plaćanje pouzećem<small>Gotovinom kuriru pri preuzimanju</small></div></div>
+      <button class="btn btn-buy" type="submit" style="width:100%;margin-top:18px">Potvrdi porudžbinu</button>
+      <p class="help-link">Pitanja? <a href="https://www.instagram.com/heklichica_/" target="_blank" rel="noopener">Pišite nam na Instagramu</a></p>
+    </form>
+    <div class="recap-wrap"><div class="recap" id="coRecap"></div></div>
+  </div>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const PRODUCTS = {
+  zeka:     {name:'Zeka balerina',     price:4900, img:'img/zeka5.jpg'},
+  zvecka:   {name:'Zvečka sa medom',   price:2200, img:'img/zvecka2.jpg'},
+  dino:     {name:'Dinosaurus',        price:4500, img:'img/dino1.jpg'},
+  jednorog: {name:'Jednorog',          price:5200, img:'img/jed1.jpg'},
+  pozelji:  {name:'Igračka po želji',  price:5500, img:'img/logo.jpg', variant:'Opis ideje u napomeni uz porudžbinu; konačnu cenu potvrđujemo'}
+};
+
+/* ---- Heklichica cart (shared by both pages through localStorage) ---- */
+const SHIPPING = 390, FREE_FROM = 7000; // ESTIMATE, see brief
+const $ = id => document.getElementById(id);
+const fmt = n => n.toLocaleString('de-DE') + ' RSD';
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let cart = [];
+try { cart = JSON.parse(localStorage.getItem('hk_cart') || '[]'); if (!Array.isArray(cart)) cart = []; } catch (e) { cart = []; }
+function save(){ try { localStorage.setItem('hk_cart', JSON.stringify(cart)); } catch (e) {} }
+function totals(){
+  const sub = cart.reduce((s, l) => s + l.unit * l.qty, 0);
+  const free = cart.some(l => l.freeShip) || sub >= FREE_FROM;
+  const ship = cart.length ? (free ? 0 : SHIPPING) : 0;
+  return {sub, ship, free, total: sub + ship};
+}
+function count(){ return cart.reduce((s, l) => s + l.qty, 0); }
+let toastT;
+function toast(html){ const t = $('toast'); t.innerHTML = html; t.classList.add('show'); clearTimeout(toastT); toastT = setTimeout(() => t.classList.remove('show'), 2600); }
+function addLine(item, silent){
+  const f = cart.find(l => l.key === item.key);
+  if (f) f.qty += item.qty; else cart.push(item);
+  save(); renderCart();
+  const b = $('cartCount'); b.classList.add('bump'); setTimeout(() => b.classList.remove('bump'), 200);
+  if (!silent) toast('🧸 Dodato u korpu: <b>' + esc(item.name) + '</b> × ' + item.qty);
+}
+function quickAdd(id){
+  const p = PRODUCTS[id]; if (!p) return;
+  addLine({key: id + '|default', name: p.name, variant: p.variant || 'Boje potvrđujemo nakon porudžbine', unit: p.price, qty: 1, img: p.img});
+}
+function renderCart(){
+  $('cartCount').textContent = count();
+  const body = $('drawerBody'), foot = $('drawerFoot');
+  if (!cart.length){
+    body.innerHTML = '<div class="empty"><div class="em">🧶</div><p><b>Korpa je prazna.</b></p><p>Izaberi igračku koja ti se dopada.</p></div>';
+    foot.innerHTML = '<a class="btn btn-ghost" href="index.html#kolekcija" data-close>Pogledaj igračke</a>';
+  } else {
+    body.innerHTML = cart.map((l, i) => '<div class="line"><img src="' + l.img + '" alt=""><div><b>' + esc(l.name) + '</b><small>' + esc(l.variant) + '</small>' +
+      '<div class="lq"><button type="button" aria-label="Manje" data-d="-1" data-i="' + i + '">−</button><span>' + l.qty + '</span><button type="button" aria-label="Više" data-d="1" data-i="' + i + '">+</button></div></div>' +
+      '<div><div class="pr">' + fmt(l.unit * l.qty) + '</div><button type="button" class="rm" data-rm="' + i + '">Ukloni</button></div></div>').join('');
+    const t = totals();
+    const left = FREE_FROM - t.sub;
+    foot.innerHTML = (t.free ? '<div class="ship-note">Besplatna dostava za ovu porudžbinu 🚐</div>' : '<div class="ship-note">Još ' + fmt(left) + ' do besplatne dostave</div>') +
+      '<div class="sum"><span>Igračke</span><span>' + fmt(t.sub) + '</span></div><div class="sum"><span>Dostava</span><span>' + (t.ship ? fmt(t.ship) : 'Besplatno') + '</span></div>' +
+      '<div class="sum tot"><span>Ukupno</span><span>' + fmt(t.total) + '</span></div><button class="btn btn-buy" type="button" id="goCheckout">Nastavi na poručivanje</button>';
+    $('goCheckout').onclick = openCheckout;
+  }
+}
+function lockScroll(on){ document.body.style.overflow = on ? 'hidden' : ''; }
+function openCart(){ $('drawer').classList.add('show'); $('drawer').setAttribute('aria-hidden', 'false'); $('overlay').classList.add('show'); lockScroll(true); $('drawerClose').focus(); }
+function closeCart(){ $('drawer').classList.remove('show'); $('drawer').setAttribute('aria-hidden', 'true'); if (!$('modal').classList.contains('show')) { $('overlay').classList.remove('show'); lockScroll(false); } }
+function openCheckout(){
+  closeCart(); $('overlay').classList.add('show');
+  const m = $('modal'); m.classList.add('show'); lockScroll(true);
+  renderRecap(); m.scrollTop = 0; setTimeout(() => { const i = document.querySelector('#coForm input'); if (i) i.focus(); }, 30);
+}
+function closeCheckout(){ $('modal').classList.remove('show'); $('overlay').classList.remove('show'); lockScroll(false); resetSheet(); }
+function renderRecap(){
+  const t = totals();
+  $('coRecap').innerHTML = '<h4>Tvoja porudžbina</h4>' + cart.map(l => '<div class="rl"><div>' + esc(l.name) + ' × ' + l.qty + '<small>' + esc(l.variant) + '</small></div><b>' + fmt(l.unit * l.qty) + '</b></div>').join('') +
+    '<div class="rl"><span>Dostava</span><b>' + (t.ship ? fmt(t.ship) : 'Besplatno') + '</b></div><div class="sum tot" style="margin-bottom:0"><span>Za plaćanje pouzećem</span><span>' + fmt(t.total) + '</span></div>';
+}
+let sheetHTML = '';
+function resetSheet(){ if (sheetHTML && $('sheet').dataset.done){ $('sheet').innerHTML = sheetHTML; delete $('sheet').dataset.done; bindForm(); } }
+function validate(f){
+  let ok = true;
+  const rules = {name: v => v.trim().split(/\s+/).length >= 2, address: v => v.trim().length >= 5, city: v => v.trim().length >= 2, zip: v => /^\d{5}$/.test(v.trim()), phone: v => v.replace(/[^\d+]/g, '').length >= 8};
+  Object.keys(rules).forEach(k => {
+    const inp = f.elements[k], good = rules[k](inp.value), wrap = inp.closest('.fld');
+    wrap.classList.toggle('has-err', !good); inp.classList.toggle('bad', !good); inp.setAttribute('aria-invalid', !good);
+    if (!good && ok){ inp.focus(); ok = false; }
+  });
+  return ok;
+}
+function bindForm(){
+  const f = $('coForm'); if (!f) return;
+  f.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!cart.length || !validate(f)) return;
+    const t = totals(), no = 'HK-' + String(Math.floor(1000 + Math.random() * 9000));
+    const first = f.elements.name.value.trim().split(/\s+/)[0];
+    const lines = cart.map(l => '<div class="rl"><div>' + esc(l.name) + ' × ' + l.qty + '<small>' + esc(l.variant) + '</small></div><b>' + fmt(l.unit * l.qty) + '</b></div>').join('');
+    const addr = esc(f.elements.address.value.trim()) + ', ' + esc(f.elements.zip.value.trim()) + ' ' + esc(f.elements.city.value.trim());
+    const html = '<div class="done"><div class="big">🧸</div><span class="eyebrow">Porudžbina primljena</span><h3>Hvala, ' + esc(first) + '!</h3><p>Tvoj broj porudžbine je <b>' + no + '</b>. Javićemo ti se na <b>' + esc(f.elements.phone.value.trim()) + '</b> radi potvrde boja i detalja, a zatim počinjemo da heklamo.</p>' +
+      '<p>Pre slanja dobijaš fotografiju i video zapis gotove igračke. Šaljemo Post Express službom.</p><div class="recap"><h4>Pregled</h4>' + lines +
+      '<div class="rl"><span>Dostava</span><b>' + (t.ship ? fmt(t.ship) : 'Besplatno') + '</b></div><div class="rl"><span>Adresa</span><span style="text-align:right">' + addr + '</span></div><div class="sum tot" style="margin-bottom:0"><span>Plaćaš kuriru</span><span>' + fmt(t.total) + '</span></div></div>' +
+      '<button class="btn btn-buy" type="button" id="doneBtn">Nazad u prodavnicu</button><p class="help-link">Pitanja? <a href="https://www.instagram.com/heklichica_/" target="_blank" rel="noopener">Pišite nam na Instagramu</a></p></div>';
+    sheetHTML = sheetHTML || '';
+    $('sheet').dataset.done = '1';
+    $('sheet').innerHTML = '<button class="x" type="button" id="modalClose2" aria-label="Zatvori">×</button>' + html;
+    $('modal').scrollTop = 0;
+    cart = []; save(); renderCart();
+    $('modalClose2').onclick = $('doneBtn').onclick = closeCheckout;
+  });
+}
+function initCart(){
+  sheetHTML = $('sheet').innerHTML;
+  bindForm();
+  renderCart();
+  $('cartBtn').onclick = openCart; $('drawerClose').onclick = closeCart;
+  $('sheet').addEventListener('click', e => { if (e.target.closest('#modalClose')) closeCheckout(); });
+  $('overlay').onclick = () => { if ($('modal').classList.contains('show')) closeCheckout(); else closeCart(); };
+  document.addEventListener('keydown', e => { if (e.key === 'Escape'){ if ($('modal').classList.contains('show')) closeCheckout(); else closeCart(); } });
+  $('drawerBody').addEventListener('click', e => {
+    const d = e.target.closest('[data-d]'), r = e.target.closest('[data-rm]');
+    if (d){ const l = cart[+d.dataset.i]; l.qty += +d.dataset.d; if (l.qty < 1) cart.splice(+d.dataset.i, 1); save(); renderCart(); }
+    if (r){ cart.splice(+r.dataset.rm, 1); save(); renderCart(); }
+  });
+  $('drawerFoot').addEventListener('click', e => { if (e.target.closest('[data-close]')) closeCart(); });
+  document.querySelectorAll('[data-add]').forEach(b => b.addEventListener('click', () => quickAdd(b.dataset.add)));
+  /* mobile menu */
+  const h = document.querySelector('header.site'), mb = h.querySelector('.menu-btn');
+  const p = document.createElement('nav'); p.className = 'mobile-nav'; p.setAttribute('aria-label', 'Meni');
+  h.querySelectorAll('nav.main a').forEach(a => { const c = a.cloneNode(true); c.removeAttribute('class'); p.appendChild(c); });
+  h.querySelector('.wrap').appendChild(p);
+  mb.addEventListener('click', () => { const o = h.classList.toggle('menu-open'); mb.setAttribute('aria-expanded', o); });
+  p.addEventListener('click', e => { if (e.target.closest('a')){ h.classList.remove('menu-open'); mb.setAttribute('aria-expanded', 'false'); } });
+  window.addEventListener('storage', e => { if (e.key === 'hk_cart'){ try { cart = JSON.parse(e.newValue || '[]'); } catch (x) { cart = []; } renderCart(); } });
+}
+
+initCart();
+
+</script>
+</body>
+</html>
